@@ -1,0 +1,10 @@
+base_config:
+- config/basic.yaml
+- config/logging.yaml
+- config/datamodule/pairdata.yaml
+- config/physical/cassi_pair.yaml
+- config/model/mstpp.yaml
+
+train_data_mode: m1
+load_params_path: "${_pretrain_path}/${train_data_mode}/mstpp.pt"
+outf: ${_outf}/${train_data_mode}_${name}

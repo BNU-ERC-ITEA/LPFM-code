@@ -1,0 +1,10 @@
+base_config:
+- config/basic.yaml
+- config/logging.yaml
+- config/datamodule/pairdata.yaml
+- config/physical/cassi_pair.yaml
+- config/model/ssr_5stg.yaml
+
+train_data_mode: m2
+load_params_path: "${_pretrain_path}/${train_data_mode}/ssr_5stg.pt"
+outf: ${_outf}/${train_data_mode}_${name}

@@ -1,0 +1,12 @@
+data_root: ../data
+
+_outf: ${data_root}/outf/
+_forward_model_path: ${data_root}/forward_model/
+_gt_root: ${data_root}/real_data/gt/  
+_infer_data_root: ${data_root}/real_data/meas/  
+_csv_data_root: ${data_root}/csv/
+_code_root: null
+_data_folder: ${data_root}/simu_hsi/
+
+# optional
+_pretrain_path: ${data_root}/pretrain/

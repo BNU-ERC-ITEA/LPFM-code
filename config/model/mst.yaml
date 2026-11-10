@@ -1,0 +1,7 @@
+model_name: CASSI_BENCHMARK_MST
+model_param:
+  dim: ${eval:'${data_c}'}
+  num_blocks: [2, 2, 2]
+  stage: 2
+use_loss: false
+

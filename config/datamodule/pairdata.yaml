@@ -1,0 +1,22 @@
+
+
+forward_model_path: ${_forward_model_path}/physicalModel.mat
+
+train_test_scene_files: [
+
+    "${_csv_data_root}/mini.xlsx",
+
+
+]
+gt_root: ${_gt_root}
+infer_data_root: ${_infer_data_root}
+
+target_bands: [453,458,462,467,472,477,482,488,494,500,506,513,520,527,535,543,552,562,572,582,593,605,619,633,647,664,682,702,723,748]
+dataset_name: pair_csv_cassi_wphi
+
+meas_h: ${data_h}
+meas_w: ${eval:'${shift_size}+${data_w}*1'}
+
+roi_h_index: 53
+crop_roi: ${eval:'[0,${data_w}+${shift_size},${roi_h_index},${roi_h_index}+${test_data_h}]'}
+batch_size: 1

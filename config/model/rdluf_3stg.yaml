@@ -1,0 +1,20 @@
+model_name: CASSI_BENCHMARK_RDLUF
+model_param:
+  spatial_branch: true
+  spectral_branch: true
+  spatial_interaction: true
+  spectral_interaction: true
+  stage_interaction: true
+  block_interaction: true
+  in_dim: ${eval:'${data_c}'}
+  out_dim: ${eval:'${data_c}'}
+  dim: ${eval:'${data_c}'}
+  stage: 3
+  DW_Expand: 1
+  ffn_name: Gated_Dconv_FeedForward
+  FFN_Expand: 2.66
+  bias: false
+  LayerNorm_type: BiasFree
+  act_fn_name: gelu
+  body_share_params: 1
+use_loss: false

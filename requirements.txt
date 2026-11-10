@@ -1,0 +1,13 @@
+torch==1.13.1
+torchvision==0.14.1
+torchaudio==0.13.1
+einops==0.8.2
+matplotlib==3.8.0
+numpy
+omegaconf==2.3.0
+pandas
+pytorch_lightning==2.0.0
+scipy
+tqdm
+opencv-python
+openpyxl

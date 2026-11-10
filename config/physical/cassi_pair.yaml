@@ -1,0 +1,14 @@
+physical_name: DAUCASSIPairDatasetPhysical
+data_c: 30 
+data_h: 256
+data_w: 1200
+test_data_h: 896
+shift_size: ${eval:'(${data_c}-1)*${shift_step}'}
+shift_step: 1
+phi_gaussian_noise: 0.0
+csr_gaussian_noise: 0.0
+y_gaussian_noise: 0.1
+y_shot_noise: 0.0
+forward_model_path: ${_forward_model_path}/physicalModel.mat
+crop_mat: true
+rotate_90: -1 # Whether to rotate the input image, -1 for clockwise

@@ -1,0 +1,3 @@
+model_name: CASSI_BENCHMARK_DSSP
+model_param:
+  bands: ${eval:'${data_c}'}

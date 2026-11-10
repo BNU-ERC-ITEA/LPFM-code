@@ -1,0 +1,6 @@
+model_name: CASSI_BENCHMARK_CST
+model_param:
+  dim: ${eval:'${data_c}'}
+  num_blocks: [2, 2, 2]
+  sparse: true
+use_loss: true

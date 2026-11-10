@@ -1,0 +1,9 @@
+model_name: CASSI_BENCHMARK_SSR
+model_param:
+  size: ${batch_size}
+  stage: 5
+  batch_size: ${batch_size}
+  bands: ${data_c}
+  len_shift: ${shift_step}
+  dim: ${data_c}
+use_loss: false

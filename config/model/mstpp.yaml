@@ -1,0 +1,7 @@
+model_name: CASSI_BENCHMARK_MSTPP
+model_param:
+  in_channels: ${eval:'${data_c}'}
+  out_channels: ${eval:'${data_c}'}
+  n_feat: ${eval:'${data_c}'}
+  stage: 3
+use_loss: false
