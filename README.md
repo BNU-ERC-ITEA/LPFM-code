@@ -98,11 +98,28 @@ After downloading, place the data into 'data_root' folder. The structure of the 
           │   ├── ...
           └── Scene20250804141225.mat
 ```
-update the root paths in the configuration file  config/basic.yaml:
+Update the data paths in config/basic.yaml:
 ```yaml
 # config/basic.yaml
-data_root: path to all the data
-_infer_data_root: choose "full data" or  "mini test data"
+
+# Root directory containing all datasets, pretrained models ...
+data_root: /path/to/data_root
+
+# Select the inference dataset directory:
+# For the full dataset: ${data_root}/real_data
+# For the mini test dataset: ${data_root}/mini_real_data
+_infer_data_root: ${data_root}/mini_real_data
+```
+Next, configure the corresponding CSV/Excel data file in config/datamodule/pairdata.yaml:
+
+```yaml
+# config/datamodule/pairdata.yaml
+
+# For the full dataset:
+"${_csv_data_root}/full_data.xlsx"
+
+# For the mini test dataset:
+"${_csv_data_root}/mini.xlsx"
 ```
 
 ---
