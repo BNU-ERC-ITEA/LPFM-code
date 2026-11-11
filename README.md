@@ -3,7 +3,7 @@ This repo includes:
 - Specification of dependencies.
 - Evaluation code.
 - Pre-trained models.
-- A mini subset of the rSCI dataset
+- Dataset
 
 
 The current public release focuses on evaluation and reproducibility. Additional components, including the complete dataset and training pipeline, will be released in a future update.
@@ -31,7 +31,7 @@ All required files (mini dataset of rSCI, pretrained models for all five trainin
 | Platform      | Link         |
 |---------------|--------------|
 | Baidu Netdisk | [Link](https://pan.baidu.com/s/1kiqzc374xdg8CZbqAlWqXA)    (Access Code: `lpfm`) |
-| Google Drive  | [Link](https://drive.google.com/drive/folders/1sh2ppIPPAR9ImqWa6CPJQpL-1xV8DOhS?usp=drive_link)    |
+<!--| Google Drive  | [Link](https://drive.google.com/drive/folders/1sh2ppIPPAR9ImqWa6CPJQpL-1xV8DOhS?usp=drive_link)    |-->
 
 
 
@@ -76,21 +76,33 @@ After downloading, place the data into 'data_root' folder. The structure of the 
   |   |-- m5
   |       |-- ... (same as m1)
   |
-  |-- real_data  (mini test data)
-      |-- gt
-      |   |-- 20250724154431.mat
-      |   |-- 20250731090903.mat
-      |   |-- 20250804141225.mat
-      |
-      |-- meas
-          |-- Scene20250724154431.mat
-          |-- Scene20250731090903.mat
-          |-- Scene20250804141225.mat
+  |-- mini_real_data/          (mini test data)
+  │   ├── gt/
+  │   │   ├── 20250731090903.mat
+  │   │   └── 20250804141225.mat
+  │   └── meas/
+  │       ├── Scene20250731090903.mat
+  │       └── Scene20250804141225.mat
+  │
+  │
+  |-- real_data/               (full data)
+      ├── gt/
+      │   ├── 20250724154431.mat
+      │   ├── 20250731090903.mat
+      │   ├── ...
+      │   └── 20250804141225.mat
+      |   
+      └── meas/
+          ├── Scene20250724154431.mat
+          ├── Scene20250731090903.mat
+          │   ├── ...
+          └── Scene20250804141225.mat
 ```
 update the root paths in the configuration file  config/basic.yaml:
 ```yaml
 # config/basic.yaml
 data_root: path to all the data
+_infer_data_root: choose "full data" or  "mini test data"
 ```
 
 ---
